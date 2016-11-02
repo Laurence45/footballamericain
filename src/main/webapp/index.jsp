@@ -26,6 +26,7 @@ String requeteSql = "SELECT NAME,CITY from TEAMS where city = 'San Francisco';";
         while (resultat.next()) {
             String nomequipe = resultat.getString("NAME");
             String ville = resultat.getString("CITY");
+            out.println("Nom de l'équipe qui se trouve à " + ville + " : " + nomequipe");
         }
         resultat.close();
         requete.close();
